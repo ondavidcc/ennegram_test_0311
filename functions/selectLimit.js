@@ -6,7 +6,7 @@ function selectLimit(limit){
         document.getElementById("popupBackground").style.display = "flex";
         return false;
     }else if (checkedCheckboxes.length == limit){
-        document.getElementById('mainForm').action = "../result/result.html";
+        document.getElementById('mainForm').action = "ennegram_test/result/result.html";
     }else if (checkedCheckboxes.length > limit){
         document.getElementById('mainForm').action = window.location.href;
     }
