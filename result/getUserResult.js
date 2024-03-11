@@ -1,8 +1,7 @@
-//import getDescriptions from "ennegram_test/result/getDescription.js";
-////import getDescriptions from "getDescription.js";
-
 (async ()=>{
-    let descriptions = await getDescriptions();
+    let response_des = await fetch('../cards/descriptions.json');
+    let descriptions = await response_des.json();
+
     let response = await fetch('../cards/cards.json');
     let data = await response.json();
 
@@ -46,15 +45,4 @@ function isInURL(id, url) {
         results = regex.exec(url);
     if (!results) return false;
     return true;
-}
-
-async function getDescriptions() {
-    try {
-        let response = await fetch('../cards/descriptions.json');
-        let descriptions = await response.json();
-        return descriptions;
-    } catch (error) {
-        // 處理錯誤
-        console.error('Error in getDescription:', error);
-    }
 }
