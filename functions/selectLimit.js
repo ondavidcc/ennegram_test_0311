@@ -7,7 +7,7 @@ function selectLimit(limit){
         document.getElementById("popupBackground").style.display = "flex";
         return false;
     }else if (checkedCheckboxes.length == limit){
-        document.getElementById('mainForm').action = "../result/result.html";
+        document.getElementById('mainForm').action = "../result/result.php";
     }else if (checkedCheckboxes.length > limit){
         if(window.location.href.includes('?')){
             document.getElementById("popupMessage").innerHTML = "您最多只能選擇20張卡牌！";
